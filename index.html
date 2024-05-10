@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Git</title>
+</head>
+<body>
+    <h1>Everyday Git</h1>
+    <h2>What Is Git</h2>
+    <p>Git is a version control system.</p>
+    <p><b>A version control system </b>is a software tool that helps to track and manage changes to files, code, documents, and any other types of digital content over time.
+    </p>
+    <p>Other types of version control system include  </p>
+    <ul>
+        <li>CVS (Concurrent Versions System)</li>
+        <li> Subversion (SVN)</li>
+        <li>Git</li>
+        <li>Mercurial (Hg)</li>
+        <li>Perforce (Helix Core)</li>
+        <li>IBM Rational ClearCase</li>
+    </ul>
+    <p>In this blog we will be going through Git and Github</p>
+
+    <h2>Installing Git</h2>
+    <p><b>step 1:</b>check if you have git installed in your machine or not </p>
+        <ul><li>Open the command prompt in windows or terminal in linux/macos</li>
+            <li>Type the command git --version.</li>
+            <li>Hit enter.</li>
+            <li>If you have git installed, you should see something like: git version x.y</li>
+            <li>If not, then you will see an error message that the command is not recognized.</li>
+      
+        </ul>
+        <img src="assets/command 1.png" alt="cmd screenshot of the command">
+        <p>Checking if you have git installed in your pc</p>
+    <p><b>step 2:</b>If you don’t have git installed, head over to <a href=" https://www.git-scm.com/ " target="blank"> https://www.git-scm.com/ </a> and download git from there.
+    </p>
+
+    <h2>Configuring Git</h2>
+    <p>Now, let Git know who you are. This is an important step after installing git as each Git commit uses this information.
+    </p>
+    <p>To let git know who you are, you pass in the username and email address</p>
+    <p>*To configure your username: <b>git config --global user.name “your username”</b></p>
+    <p>*To configure your email address: <b>git config –global user.email “your email address”</b></p>
+    <I>Tip***use your github email address or if you don’t have a github account, use an email address that you will use to sign up for github.</I>
+    <img src="assets/config cmd.png" alt="configuration screenshot">
+    <p>Configuring Git</p>
+
+    <h2>Initializing a Git repository</h2>
+    <p>Before we can use git in our project, we need initialize a git repository inside that project.
+    </p>
+    <p><b>*A git repository</b> is a storage location where GIT version control system manages and stores project’s files and revision history.</p>
+    <p>*To check if the project contains a git repository, run the command <b> git status</b> where you will get a message <b>“fatal not a git repository…” </b> if is not git is not aready initialized. Any other message means that the project contains a git repository.  </p>
+    <p>*To initialize git use <b>git init</b> command. If its initialized succesfully you will recieve a message <b>“Initialized an empty git repository in…”</b></p>
+    <i>NB//Make sure to open cmd on the file you want to control</i> <br>
+    <img src="assets/init git.png" alt="initializig git screenshot">
+    <p>Initializing Git commands</p>
+
+    <h2>Adding Files to the Staging Area</h2>
+    <P><b>A staging area</b> is an area where changes to files are prepared before they are committed to repository.
+    </P>
+    <p>*Whenever you finish part of the work, you should add the files to a staging area.
+    </p>
+    <p>*To add file in the staging area use these commands <b>git add filename.
+    </b></p>
+    <p>To add multiple files use <b>git add file1 file2 file3
+    </b> or <b>git add .</b> , <b>git add --all</b>.</p>
+    <p>There are 2 types of files, tracked files and untracked files</p>
+    <p><b>Tracked files</b> are files that are ready to be committed to the repository you are working on.
+    </p>
+    <p><b>Untracked files</b> are files that have not yet been added to the staging area</p>
+    <p>To check whether the the files are staged or not use <b>git status</b> </p>
+    <img src="assets/staging.png" alt="staging area screenshot">
+    <p>Adding files in the staging area</p>
+
+    <h2>Commiting Changes</h2>
+    <p><b>A commit</b> in git is a snapshot of changes made to a repository at a particular point in time.
+    </p>
+    <p>Adding commits keeps track of our progress and changes as we work.
+    </p>
+    <p>You make a new commit by using <b> git commit –m “commit message” </b>.</p>
+    <p>If we want we can view past commits using the git log command.
+    </p>
+    <p>We can use git <b>log --oneline</b> if we want a bit more compressed output of <b>git log</b>.
+    </p>
+    <p>To go back to particular commit use <b>git checkout commitName</b></p>
+    <p>To write good commits answer the question <b>This commit will?</b></p>
+    <img src="assets/commit.png" alt="a git commit screenshot">
+    <p>Commit changes to a git repository</p>
+
+    <h2>Branches</h2>
+    <p>A branch is a new/separate version of the main repository.
+    </p>
+    <p>Branches are important because they allow multiple developers to work on different features, bug fixes, or experiments simultaneously without interfering with each other’s work.
+    </p>
+
+    <h2>Creating a Branch</h2>
+    <p>To create branch, we use the command <b> git branch new-branch-name</b>
+    </p>
+    <img src="assets/creating a branch.png" alt="creating a branch screenshot">
+    <p>creating a branch command</p>
+
+    <h2>Viewing All Branches</h2>
+    <p>We can then view all the branches we have using the command <b>git branch</b>
+    </p>
+    <p>The branch with a * symbol to its left is the active branch/the branch we are in.</p>
+    <img src="assets/viewing branches.png" alt="viewing all branches screenshot">
+    <p>Viewing all branches command</p>
+
+    <h2>Switching Active Branches</h2>
+    <p>We can change branches using the command <b>git checkout branch-name</b> or <b>git switch branch-name</b>
+    </p>
+    <img src="assets/switching branch.png" alt="switching branches screenshot">
+    <p>Switching active branches <command></p>
+
+     <h2>Merging a branch</h2>
+     <p>Once you finish working in your branch and you are comfortable that is what you want, we merge this branch to the master branch/ the main branch.
+    </p>
+    <p>To merge a branch, add all the changes made in that branch to the staging area, then commit those changes.</p>
+    <p>After that go to the main branch you want to merge the branch with</p>
+    <p>Use the command <b>git merge branch-name</b></p>
+    <img src="assets/merge.png" alt="merging a branch screenshot">
+    <p>Merging command</p>
+
+    <h2>Deleting a Branch</h2>
+    <p>You can delete a branch using the command <b>git branch –D branch-name</b>
+    </p>
+    <img src="assets/delt.png" alt="deliting braches command">
+    <p>Deleting a branch command</p>
+
+    <h2>Recommendation</h2>
+    <p>Congratulations! You are now aware of git and its commands.Below are some of the things i recommend you learn</p>
+     <ul>
+        <li>Do lots of practices on the above commands.</li>
+        <li><b>Collaboration with GitHub:</b> Dive into collaboration workflows using GitHub, such as pull requests and code reviews. </li>
+        <li>Undoing git commits and changes <a href="https://www.atlassian.com/git/tutorials/undoing-changes#:~:text=Once%20you're%20back%20in,to%20undo%20any%20undesired%20changes." target="blank">visit this site</a></li>
+
+     </ul>
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+</body>
+</html> 
